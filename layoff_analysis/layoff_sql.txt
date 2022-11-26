@@ -1,0 +1,101 @@
+##creating the table
+   create table layoff(
+      company_id serial primary key,
+      company varchar(50),
+      location varchar(50),	
+      industry varchar(50),
+      total_laid_off integer,
+      percent_laid_off decimal,
+      date date,
+      stage varchar(50),
+      country varchar(50),
+      funds_raised decimal	
+    )
+
+ ## Removing the duplicates
+    select company,location,total_laid_off,count(*)
+
+    from layoff
+    group by company , location,total_laid_off
+    having count(*)>1;    
+    ## we get 45 rows here
+
+   select max(company_id),company,location,total_laid_off
+   from layoff
+   group by company , location ,total_laid_off
+
+   delete from layoff
+   where company_id not in
+   (select max(company_id)
+   from layoff
+   group by company , location ,total_laid_off)
+## We deleted dthe duplicate rows
+
+## Replacing the null values in columns
+  update layoff 
+  set total_laid_off = 0
+  where total_laid_off is null
+
+  update layoff 
+  set percent_laid_off = 0
+  where percent_laid_off is null
+
+  update layoff
+  set industry = 'data not found'
+  where industry is null
+
+## Add a month column
+  alter table layoff
+  add month_of_layoff integer;
+
+  update layoff 
+  set month_of_layoff = extract(month from date);
+
+## Industry with the most number of layoffs..
+
+   select industry,sum(total_laid_off) from layoff
+   group by industry
+   order by sum desc
+   ## we see that consumer industry is most affected followed by transportation and retail respectively.
+
+## Most affected country..
+   select country,sum(total_laid_off) from layoff
+   group by country
+   order by sum desc  
+   ## USA is the most affected country followed by India and Brazil respectively.
+
+##Companies with the maximum numbers of layoffs..
+   select company,industry,sum(total_laid_off) from layoff
+   group by company,industry
+   order by sum desc
+   ## This shows us that Meta company of consumer industry did the maximum number of layoffs followed by Amazon(Retail) and Uber(Transportation)
+
+## Most affected Cities in the top affected countries..
+   select country,location,sum(total_laid_off) from layoff
+   group by country,location
+   order by sum desc
+   ## SF Bay Area and New York are the most affected cities in USA.
+
+## How the stage of the company affected the layoff..
+   select stage,sum(total_laid_off) from layoff 
+   group by stage
+   order by sum desc
+   ## Companies at the SEED stage have the least number of layoffs while Companies at IPO stage has the most number of layoffs.
+
+
+## Maximum percent of workforce laid off by different industries..
+   select industry, sum(percent_laid_off)
+   from layoff
+   group by industry
+   order by sum desc
+
+   ## It is interesting to see that as maximum number of workforce laid off is from CONSUMER industry while the Maximum percent of workforce laid off is by FINANCE industry.
+
+## Which month has the maximum layoff..
+   select month_of_layoff,sum(total_laid_off)
+   from layoff
+   group by month_of_layoff
+   order by sum desc
+
+   ## We can see that the month of november has the maximum number of layoffs.
+   
