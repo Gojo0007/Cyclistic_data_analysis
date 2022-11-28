@@ -30,4 +30,4 @@ During the the analysis i came up with the following questions which gave insigh
   * Why did casual riders book more rides during the weekend while member riders booked more rides on weekdays?
   * Why the average ride duration of casual riders is greater than members during the week?
 
-### For answers refer to my jupter notebook. 
+### For answers refer to my jupter notebook. And checkout my Tableau Visualisation here: [Visuals](https://public.tableau.com/app/profile/shubham.saini1159/viz/cyclistic_visual/Dashboard1#1)
