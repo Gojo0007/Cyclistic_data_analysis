@@ -29,5 +29,10 @@ During the the analysis i came up with the following questions which gave insigh
   * Why do member riders use more classic and electric bikes than docked bikes?
   * Why did casual riders book more rides during the weekend while member riders booked more rides on weekdays?
   * Why the average ride duration of casual riders is greater than members during the week?
+##PREVIEW:
+
+![d2](https://user-images.githubusercontent.com/117715150/204276671-cb84561a-2886-4332-be24-4edea622db6b.png)
+
+![avg](https://user-images.githubusercontent.com/117715150/204276714-3e1695d8-ebb3-4600-93c8-e8a239194b7c.png)
 
 ### For answers refer to my jupter notebook. And checkout my Tableau Visualisation here: [Visuals](https://public.tableau.com/app/profile/shubham.saini1159/viz/cyclistic_visual/Dashboard1#1)
