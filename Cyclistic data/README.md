@@ -36,3 +36,13 @@ During the the analysis i came up with the following questions which gave insigh
 ![avg](https://user-images.githubusercontent.com/117715150/204276714-3e1695d8-ebb3-4600-93c8-e8a239194b7c.png)
 
 ### For answers refer to my jupter notebook. And checkout my Tableau Visualisation here: [Visuals](https://public.tableau.com/app/profile/shubham.saini1159/viz/cyclistic_visual/Dashboard1#1)
+
+## CONCLUSION:
+
+   Casual riders use more docked bikes than classic and electric bikes as docked bikes are easily accessible. You can get bikes at any docking station unlike Casual and Electric bikes.
+
+   Member riders use more Classic and Electric bikes because the classic bikes are cost effficient as they are mostly undocked so you can just park it anywhere and not bother about docking it at a docking station before the time runs out. They also use electric bikes because they are fast and help them commute to work faster with less energy spent cycling.
+
+   Member riders bookes more rides during weekend as they want to enjoy the leisure of the weekend and spend more time outside.
+
+Average ride duration of causal riders is more than member riders as member riders tend to go for work and return home from work.
