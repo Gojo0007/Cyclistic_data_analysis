@@ -3,6 +3,8 @@ This is a Google Data Analytics capstone project that answers the question:
   * How do annual members and casual riders use Cycistic bikes differently?
   * Why would casual riders buy Cyclistic annual memberships?
   *  How can Cyclistic use digital media to influence casual riders to become members?
+  
+  Checkout my Tableau Visualisation here: [Visuals](https://public.tableau.com/app/profile/shubham.saini1159/viz/cyclistic_visual/Dashboard1#1)
 
 ## Project Guide
   In this project i used Pandas, Matplotlib and Seaborn to analyze and answer business questions using 12 months of "bike-sharing" dataset. The data contains hundreds of thousands of data broken down into ride_id, rideable_type, started_at, ended_at, start_station_name, start_station_id, end_station_name, end_station_id, etc.
